@@ -1,0 +1,77 @@
+/* === Variables & Base === */
+:root {
+  --bg: #ffffff;
+  --fg: #ffffff;
+  --text: #111111;
+  --text-2: #4e1f1f;
+  --brand: maroon;
+  --card: #ffffff;
+  --card-border: #ebebeb;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+
+  --radius: 12px;
+  --gap: 20px;
+
+  --font-body: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --fg: #0a0a0a;
+    --text: #ededed;
+    --text-2: #a1a1a1;
+    --brand: maroon; 
+    --card: #0f0f0f;
+    --card-border: #1e1e1e;
+    --shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* === Reset-ish === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  min-height: 100vh;
+}
+
+p {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+/* Prevent content hidden behind fixed footer */
+main {
+  padding: 0 20px 5rem 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,23 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10;
+  width: 100%;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  background: maroon;
+  color: #fff;
+  padding: 0 16px;
+}
+
+.footer p,
+.footer a,
+.footer span {
+  color: #fff;           
+}
